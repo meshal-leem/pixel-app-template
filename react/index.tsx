@@ -9,7 +9,7 @@ export function handleEvents(e: PixelMessage) {
       salesChannel === "2" ? "AED" :
         salesChannel === "3" ? "SAR" :
           salesChannel === "4" ? "GBP" : "USD"
-    const content_ids = transactionProducts.map(({ sku: id }) => ({ id }))
+    const content_ids = transactionProducts.map(({ sku: id }) => (id))
     fbqEvent('Purchase', { value, currency, content_ids, content_type: "product" })
   }
 }
