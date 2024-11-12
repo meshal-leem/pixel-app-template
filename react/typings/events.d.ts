@@ -113,6 +113,7 @@ export interface CartChangedData extends EventData {
 }
 
 export interface OrderPlacedData extends Order, EventData {
+  ordersInOrderGroup: any
   event: 'orderPlaced'
   eventName: 'vtex:orderPlaced'
 }
